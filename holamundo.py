@@ -1,5 +1,3 @@
-#mi primer programa en python
-
-print("hola mundo")
-
+# Mi primer programa en python
+print("Hola mundo peludo")
 

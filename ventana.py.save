@@ -1,7 +1,7 @@
 """
 Nombre: ventana.py
 Objetivo: muestra como trabajar con ventanas gui en python y tkinter
-Autor: sergio antonio ortiz
+Autor:
 Fecha: 29 de julio de 2020
 """
 
@@ -9,9 +9,11 @@ Fecha: 29 de julio de 2020
 from tkinter import *
 from tkinter import ttk
 
-# Función para enviar mensaje al servidor
+
+# Función  para  enviar datos al servidor echo
 def sendToServer():
-	print("Dato enviado ...")
+	print("Enviado ...")
+
 
 
 # Función main
@@ -28,7 +30,6 @@ def main():
 
 	# Creamos un boton para enviar el contenido de la propiedad text del entry al servidor
 	ttk.Button(win, text="Enviar  mensaje", command=sendToServer).pack(side=BOTTOM)    		
-
 	# Creamos un boton y  lo colocamos en la ventana
 	ttk.Button(win, text="Salir", command=quit).pack(side=BOTTOM)
 

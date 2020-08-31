@@ -1,83 +1,95 @@
 """
-nombre: funciones.py
-Objetivo: muestra de la operacion de las funciones en python
-Autor: 
-Fecha: 27 de julio de 2020
+Nombre: funciones.py
+Objetivo: muestra la operación de las funciones en python
+Autor: sergio antonio ortiz
+Fecha: 27 julio de 2020
 """
 
 def mensaje():
 	print("hola desde mensaje")
 
+
 def regresaMensaje():
-	return"saludo desde regresaMensaje"
+	return "saludo desde regresaMensaje"
+
 
 def printMensaje(msg):
 	print(msg)
 
+
 def suma(n1, n2):
-	return n1+n1
+	return n1+n2
 
 def resta(n1, n2):
-	return n1-n2
+        return n1-n2
 
-def multi(n1, n2):
-	return n1*n2
+def multiplica(n1, n2):
+        return n1*n2
 
-def dividir(n1, n2):
-	if(n2 != 0):
+def divide(n1, n2):
+	if (n2 != 0):
 		return n1/n2
-	else: 
-		print("Errorm no se puede dividir entre cero....")
+	else:
+		print("Error no se puede dividir entre cero...")
+
 
 def compara(n1, n2):
 	if n1>n2:
-		print("EL mayor es n1", n1, "" ,n2)
+		print("El mayor es n1: ", n1," ", n2)
 	elif n2>n1:
-		print("el mayor es: {},{}".format(n1,n2))
-	else: 
-		print("los numero son iguales: {}, {}".format(n1,n2))
+		print("El mayor es : {},{}".format(n2,n1))
+	else:
+		print("Los numeros son iguales: {}, {}".format(n1,n2))
 
-#fUNCION PARA MOSTRAR OPERACION FOR
+
+# Función para mostrar operación de for
 def cuenta(n1, n2):
-	if(n2>n1):
-		for i in range(n1, n2+1):
-			print("valor de i: {}".format(i))
-	elif(n1>n2):
+	if (n2>n1):
+		for i in  range(n1, n2+1):
+			print("Valor de i: {}".format(i))
+	elif (n1>n2):
 		for i in range(n1, n2-1, -1):
-			print("valor de i: {}".format(i))
-	else: 
-		print("los numeros son iguales: {}, {}".format(n1,n2))
-	
+			print("Valor de i: {}".format(i))
+	else:
+		print("Los números son iguales, no puedo contar: {}, {}".format(n1,n2))
 
+
+
+
+# Inicia función principal
 
 def main():
-	ciclo = 'S'
-	while ciclo == 'S' or ciclo == 's':
-		#invocamos funcion mensaje()
+
+	ciclo ='S'
+	while ciclo == 'S'  or  ciclo == 's':
+
+		#invocamos función mensaje
 		mensaje()
-		#invocamos funcion regresaMensaje()
-		print (regresaMensaje())
-		#invocamos funcion printMensaje()
-		printMensaje("hola te saludo.-...")
+		#invocamos función regresaMensaje
+		print(regresaMensaje())
+		#invocamos función printMensaje
+		printMensaje("hola te saludo ...")
 
-		#leemos los datos por teclado
-		a = int(input("ingrese el primer numero "))
-		b = int(input("ingrese el segundo numero "))
-		#invocamos la funcion suma 
-		print("la suma es... ", suma(a,b))
-		print("la resta es... ", resta(a,b))
-		print("la multiplicacion es... ", multi(a,b))
-		print("la division es... ", dividir(a,b))
-	
+		#Leemos los dato por teclado
+		a = int(input("Ingresa el primer entero: "))
+		b = int(input("Ingresa el segundo entero: "))
+		#Invocamos la función suma
+		print("La suma es: ", suma(a,b))
+		print("La resta es: ",resta(a,b))
+		print("La multiplicación es: ", multiplica(a,b))
+		print("La división es: ", divide(a,b))
+
 		compara(a,b)
-		cuenta(a,b)
+		cuenta(a, b)
 
-		#preguntamos por otra operacion
-		ciclo = input("Desea hacer otra operacion(s/n)")
-	else: 
-		print("***fin de programa")
+              	# Preguntamos por otra operación
+		ciclo = input("¿Desea otra operación (s/n)?")
+
+	else:
+		print("*** Fin de programa")	
+
+
 
 
 if __name__ == "__main__":
 	main()
-

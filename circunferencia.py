@@ -1,31 +1,34 @@
 """
-Nombre: circunferencia
-objetivo: permita calcular el area de una circunferencia
-autor: tu mero papi
-fecha: 28 de julio de 2020
+Nombre: Circunferencia.py
+Objetivo: permite calcular el área de una circunferencia
+Autor: sergio antonio ortiz
+Fecha: 28 de julio de 2020
 """
-
-#IMPORTAMOS LIBRERIA MATH
-
-import math
-
-#funcion para calcular area
-def area(valorRadio):
-	return math.pi*math.pow(valorRadio, 2)
+# importamos libreria math
+import math as m
 
 
+#--------------------------------------
+# Función para calcular área
+#--------------------------------------
+def calcularArea(valorRadio):
+	return m.pi*m.pow(valorRadio,2)
 
-#modulo principal
+
+
+# Módulo principal
 def main():
 	ciclo = 'S'
 	while (ciclo == 'S' or ciclo == 's'):
-		print("Programa para calcular el area de una circunferencia")
-		vradio = int(input("introduce valor del radio" ))
-		print("\n")
-		print("el area de la circunferencia con radio igual a: {}, es: {}".format(vradio, area(vradio)))
-		ciclo = input("desea ingresar otro valor (s/n)")
+		print("--- Programa para Calcular Área de Circunferencia ---")
+		vradio = int(input("Introduce valor del radio:"))
+		print("El área de la circunferencia con radio igual a:{},es:{}".format(vradio, calcularArea(vradio)))
+		ciclo = input("¿Otro cálculo (s/n)?")
 	else:
-		print("fin de programa")
+		print("*** Fin del programa")
+
 
 if __name__ == "__main__":
 	main()
+
+
