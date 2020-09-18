@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        (function(){
+            var contador = 0;
+
+            var saludo = function(){
+                contador++;
+                console.log(contador);
+                
+                // if (contador === 5) {
+                //     clearInterval(intervalo);
+                // }
+            };
+            //setTimeout(saludo, 3000)
+            var intervalo = setInterval(saludo, 1000);
+        }())
+    </script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //global: variables a las cuales podemos acceder a ellas desde cualquier parte del codigo
+        //local: variables creadas dentro de una funcion y solo se puede acceder a ellas desde su misma funcion
+        var global = "es variable global";
+        var miFuncion = function(){
+            variableLocal = "esta es local";
+            // alert(global);
+            // global = "esta es global modificada";
+            // alert(local);
+            var funcionLocal = function local() {
+                //var variableLocal = "esta es una variable local dentro de funcion local";
+                alert(variableLocal);
+            }
+            funcionLocal();            
+        }
+        miFuncion();
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+        (function(){  // FUNCION AUTO INVOCADA PARA PROTEGER EL CODIGO
+            var global = "es variable global";
+        var miFuncion = function(){
+            variableLocal = "esta es local";
+            // alert(global);
+            // global = "esta es global modificada";
+            // alert(local);
+            var funcionLocal = function local() {
+                //var variableLocal = "esta es una variable local dentro de funcion local";
+                alert(variableLocal);
+            }
+            funcionLocal();            
+        }
+        miFuncion(); 
+        }())
+        //alert(global);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////        
+        
+    </script>
+</body>
+</html>

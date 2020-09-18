@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <li>hola lorem ahsbgni nf</li>
+        <li>ostia chaval juguemos a among us</li>
+    </ol>
+
+    <script>
+        var elemento = document.createElement("li"), //crear el elemento nuevo e indicar a que eriqueta ira
+            contenido = document.createTextNode("nuevo texto");//texto nuevo a insertar en el documento
+        elemento.appendChild(contenido);//agregar contenido al documento
+
+        var padre = document.getElementsByTagName("li")[0].parentNode; //accedemos al elemento padre a partir de su nombre y posicion
+            primerElemento = document.getElementsByTagName("li")[1]; //indicar en donde se insertara un nuevo elemento a partir del nombre y posicion
+        padre.insertBefore(elemento, primerElemento); //insertar texto antes o al principio
+    </script>
+</body>
+</html>
